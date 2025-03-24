@@ -51,3 +51,10 @@ console.log("Repeat 'Hi! ' 3 times:", "Hi! ".repeat(3));
 // 10. Padding a String
 console.log("Pad Start:", "5".padStart(3, "0"));
 console.log("Pad End:", "5".padEnd(3, "0"));
+
+
+//ex
+const url="afadfadvvzcafda///afdc"
+console.log(url.replace('///','-'));
+console.log(url.includes('ca'));
+
