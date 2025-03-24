@@ -30,3 +30,13 @@ console.log(st1+st2);
 console.log("1"+2);
 console.log(1+"2");
 console.log(1+2+"3");
+
+let num1=num2=num3= 10;
+console.log(num1, num2, num3);
+
+let gamecounter=1
+gamecounter+=1
+console.log(gamecounter);  
+++gamecounter;
+gamecounter++;
+
