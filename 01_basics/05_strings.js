@@ -58,3 +58,6 @@ const url="afadfadvvzcafda///afdc"
 console.log(url.replace('///','-'));
 console.log(url.includes('ca'));
 
+let userInput = '"Hello"';
+let jsonData = `{"message": ${JSON.stringify(userInput)}}`;
+console.log(jsonData);
