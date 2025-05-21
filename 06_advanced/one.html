@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        > 0 After a successful READ action, the ordinal number of the record read is returned as the status code. After
+        a successful WRITE action, the size of the XML file written is returned as the status code.
+        0 Success. The XML I/O action is performed without problem.
+        1 The XML I/O action is trying to access an XML stream that is not opened.
+        2 This is an invalid XML I/O action.
+        3 Invalid mode is specified in the OPEN statement.
+        4 The XML stream cannot be opened.
+        5 The XML I/O action is attempting to access an internal DOM (Document Object Model) representation which is
+        not present. DOM enables you to create and modify HTML pages and XML documents as full-fledged program objects.
+        6 An invalid KEY is specified in the XML I/O action.
+        7 The end of the XML stream has been reached.
+        8 This is an invalid position to insert the specified XML item.
+        9 The current record read is not a well-formed XML document.
+        10 The internal DOM representation is not written out to any XML stream and has been cleared after a READ
+        statement or a CLOSE statement.
+        11 There is a problem reading an XML stream that is a URL.
+        12 There is a problem writing to an XML stream that is a URL.
+        13 There is a problem reading an XML stream that is not a URL.
+        14 There is a problem writing to an XML stream that is not a URL.
+        15 There is a problem closing an XML stream.
+    </div>
+</body>
+<script>
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState)
+        if (xhr.readyState==4){
+        const data=JSON.parse(this.responseText);
+        console.log(data[0]);
+        }
+    }
+    xhr.send();
+</script>
+</html>

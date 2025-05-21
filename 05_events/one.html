@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <div>
+        <ul id="languages">
+
+
+                <li id="lang1">
+                        <img src="https://logos-world.net/wp-content/uploads/2021/10/Java-Logo.png" alt="Java Logo">
+                        Java
+                    </li>
+                <li id="lang2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                    alt="CPP Logo">
+                        CPP
+                    </li>
+                <li id="lang3" onclick="alert('JS')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                    alt="JavaScript Logo">
+                        JavaScript
+                    </li>
+                <li id="lang4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                    alt="Python Logo">
+                        Python
+                    </li>
+                <li id="lang5">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="Ruby Logo">
+                        Ruby
+                    </li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    //     In the addEventListener method, the third parameter true specifies the use of event capturing instead of event bubbling. Here's a brief explanation:
+
+    // Event Capturing: If true, the event handler is set to the capturing phase. This means the event is first captured by the outermost element and propagated to the inner elements.
+    // Event Bubbling: If false (or omitted), the event handler is set to the bubbling phase. This means the event is first captured and handled by the innermost element and then propagated to the outer elements.
+    document.getElementById('lang4').addEventListener('click', function add() {
+        return alert('Python')
+    })
+
+
+    document.querySelectorAll('li').forEach(function (li) {
+        li.addEventListener('click', function (e) {
+            console.log("The element removed ");
+            if (e.target.tagName.toLowerCase() === 'img') {
+                e.target.parentNode.remove();
+            } else {
+                e.target.remove();
+            }
+        });
+    });
+
+
+</script>
+
+</html>
